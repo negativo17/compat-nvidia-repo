@@ -1,9 +1,9 @@
-Name:           cuda-drivers
-Version:        415.27
+Name:           compat-nvidia-repo
+Version:        410.93
 Epoch:          3
 Release:        1%{?dist}
-Summary:        Nvidia drivers metapackage required by official CUDA packages
-License:        GPLv3
+Summary:        Compatibility package required by official CUDA packages
+License:        NVIDIA License
 URL:            https://developer.nvidia.com/cuda-toolkit
 
 BuildArch:      noarch
@@ -23,6 +23,7 @@ Requires:       nvidia-persistenced >= %{?epoch:%{epoch}:}%{version}
 Requires:       nvidia-settings >= %{?epoch:%{epoch}:}%{version}
 Requires:       nvidia-xconfig >= %{?epoch:%{epoch}:}%{version}
 
+Provides:       cuda-drivers >= %{?epoch:%{epoch}:}%{version}
 Provides:       nvidia-drivers >= %{?epoch:%{epoch}:}%{version}
 
 %description
@@ -33,6 +34,5 @@ Nvidia driver components.
 # Empty
 
 %changelog
-* Sun Feb  3 2019 Simone Caronni <negativo17@gmail.com> - 415.27-1
+* Sun Feb  3 2019 Simone Caronni <negativo17@gmail.com> - 3:410.93-1
 - First build.
-- 
