@@ -1,7 +1,7 @@
 Name:           compat-nvidia-repo
 Version:        565.57.01
 Epoch:          3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Compatibility package required by official CUDA packages
 License:        NVIDIA License
 URL:            https://developer.nvidia.com/cuda-toolkit
@@ -17,6 +17,11 @@ Requires:       nvidia-settings >= %{?epoch:%{epoch}:}%{version}
 
 Provides:       cuda-drivers >= %{?epoch:%{epoch}:}%{version}
 Provides:       nvidia-open >= %{?epoch:%{epoch}:}%{version}
+# Add any versioned provides:
+Provides:       cuda-drivers-560 >= %{?epoch:%{epoch}:}%{version}
+Provides:       cuda-drivers-565 >= %{?epoch:%{epoch}:}%{version}
+Provides:       nvidia-open-560 >= %{?epoch:%{epoch}:}%{version}
+Provides:       nvidia-open-565 >= %{?epoch:%{epoch}:}%{version}
 
 %description
 Nvidia drivers metapackage required by official CUDA packages. It pulls in all
@@ -26,6 +31,9 @@ Nvidia driver components.
 # Without an empty files section the package is not created.
 
 %changelog
+* Tue Oct 29 2024 Simone Caronni <negativo17@gmail.com> - 3:565.57.01-2
+- Add versioned provides.
+
 * Wed Oct 23 2024 Simone Caronni <negativo17@gmail.com> - 3:565.57.01-1
 - Update to 565.57.01.
 
