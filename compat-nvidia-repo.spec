@@ -1,5 +1,5 @@
 Name:           compat-nvidia-repo
-Version:        570.144
+Version:        570.153.02
 Epoch:          3
 Release:        1%{?dist}
 Summary:        Compatibility package required by official CUDA packages
@@ -31,6 +31,9 @@ Nvidia driver components.
 # Without an empty files section the package is not created.
 
 %changelog
+* Tue May 20 2025 Simone Caronni <negativo17@gmail.com> - 3:570.153.02-1
+- Update to 570.153.02.
+
 * Tue Apr 22 2025 Simone Caronni <negativo17@gmail.com> - 3:570.144-1
 - Update to 570.144.
 
